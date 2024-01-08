@@ -1,0 +1,195 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "buynft",
+            "base": "",
+            "fields": [
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "asset_id",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "sale_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "offer_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "cancelmarket",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sale_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "config_a",
+            "base": "",
+            "fields": [
+                {
+                    "name": "market_counter",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "deletemarket",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sale_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "init",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "sales_s",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sale_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "seller",
+                    "type": "name"
+                },
+                {
+                    "name": "collection_name",
+                    "type": "name"
+                },
+                {
+                    "name": "schema_name",
+                    "type": "name"
+                },
+                {
+                    "name": "asset_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                },
+                {
+                    "name": "offer_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "asset_name",
+                    "type": "name"
+                },
+                {
+                    "name": "asset_img",
+                    "type": "string"
+                },
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "is_sale",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "uploadmarket",
+            "base": "",
+            "fields": [
+                {
+                    "name": "seller",
+                    "type": "name"
+                },
+                {
+                    "name": "col_name",
+                    "type": "name"
+                },
+                {
+                    "name": "schema_name",
+                    "type": "name"
+                },
+                {
+                    "name": "asset_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                },
+                {
+                    "name": "asset_name",
+                    "type": "name"
+                },
+                {
+                    "name": "asset_img",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "buynft",
+            "type": "buynft",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cancelmarket",
+            "type": "cancelmarket",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletemarket",
+            "type": "deletemarket",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "init",
+            "type": "init",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "uploadmarket",
+            "type": "uploadmarket",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "configs",
+            "type": "config_a",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "sales",
+            "type": "sales_s",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}

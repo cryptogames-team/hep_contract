@@ -1,0 +1,186 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "buyconfirmed",
+            "base": "",
+            "fields": [
+                {
+                    "name": "transaction_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "config_a",
+            "base": "",
+            "fields": [
+                {
+                    "name": "transaction_counter",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "seller",
+                    "type": "name"
+                },
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "transaction_board_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                },
+                {
+                    "name": "date",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "expiration",
+            "base": "",
+            "fields": [
+                {
+                    "name": "date",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "init",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "saleconfirmed",
+            "base": "",
+            "fields": [
+                {
+                    "name": "transaction_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setisfraud",
+            "base": "",
+            "fields": [
+                {
+                    "name": "transaction_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "transaction_s",
+            "base": "",
+            "fields": [
+                {
+                    "name": "transaction_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "seller",
+                    "type": "name"
+                },
+                {
+                    "name": "buyer",
+                    "type": "name"
+                },
+                {
+                    "name": "buy_confirmation",
+                    "type": "uint8"
+                },
+                {
+                    "name": "sell_confirmation",
+                    "type": "uint8"
+                },
+                {
+                    "name": "trasaction_completed",
+                    "type": "uint8"
+                },
+                {
+                    "name": "is_fraud",
+                    "type": "uint8"
+                },
+                {
+                    "name": "transaction_board_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "price",
+                    "type": "asset"
+                },
+                {
+                    "name": "date",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "buyconfirmed",
+            "type": "buyconfirmed",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "expiration",
+            "type": "expiration",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "init",
+            "type": "init",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "saleconfirmed",
+            "type": "saleconfirmed",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setisfraud",
+            "type": "setisfraud",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "configs",
+            "type": "config_a",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "transactions",
+            "type": "transaction_s",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}
