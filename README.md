@@ -13,7 +13,6 @@ Index
 2. 배포 방법
 
 # 수정 부분 1 : 불량 블록 생산자의 페널티 
--------------
 
 기존 EOSIO에서는 블록 생산자가 블록을 생산하지 않더라도 주어지는 페널티가 없습니다. 
 
@@ -38,7 +37,7 @@ $$t = 2^{페널티 개수}$$
 
 
 
-수정 부분 2 : 보상 지급 방식 변경
+# 수정 부분 2 : 보상 지급 방식 변경
 -------------
 
 기존 EOSIO에서는 블록 생산자가 블록을 다 생산하면 해당 보상이 자동으로 생산자에게 전달되지 않고 시스템 계정에 쌓이게 됩니다. 그래서 블록 생산자는 직접 cleos를 통해 보상을 수령해야되는 번거로움이 있습니다. ([해당 명령어는 cleos system claimrewards 입니다](https://developers.eos.io/manuals/eos/latest/cleos/command-reference/system/system-claimrewards))
