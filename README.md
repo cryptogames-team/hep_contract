@@ -11,7 +11,9 @@ CryptoGames는 기존 EOSIO의 블록 생산자의 페널티와 보상 지급방
 
 
 
-<img src="https://github.com/cryptogames-team/hep_contract/assets/51877962/2e037f20-eb34-4359-b604-c7770b036048" width="50%" height="50%">
+<div style="text-align:center">
+  <img src="https://github.com/cryptogames-team/hep_contract/assets/51877962/2e037f20-eb34-4359-b604-c7770b036048" width="50%" height="50%" />
+</div>
 
 ![슬라이드16](https://github.com/cryptogames-team/hep_contract/assets/51877962/2e037f20-eb34-4359-b604-c7770b036048){: width="300" height="300" .center}
 
