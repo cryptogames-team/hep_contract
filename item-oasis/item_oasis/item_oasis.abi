@@ -46,6 +46,22 @@
                 {
                     "name": "date",
                     "type": "uint64"
+                },
+                {
+                    "name": "game_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "item_count",
+                    "type": "uint64"
+                },
+                {
+                    "name": "game_server",
+                    "type": "uint64"
+                },
+                {
+                    "name": "item_type",
+                    "type": "uint64"
                 }
             ]
         },
@@ -109,7 +125,7 @@
                     "type": "uint8"
                 },
                 {
-                    "name": "trasaction_completed",
+                    "name": "transaction_completed",
                     "type": "uint8"
                 },
                 {
@@ -126,6 +142,22 @@
                 },
                 {
                     "name": "date",
+                    "type": "uint64"
+                },
+                {
+                    "name": "game_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "game_server",
+                    "type": "uint64"
+                },
+                {
+                    "name": "item_type",
+                    "type": "uint64"
+                },
+                {
+                    "name": "item_count",
                     "type": "uint64"
                 }
             ]

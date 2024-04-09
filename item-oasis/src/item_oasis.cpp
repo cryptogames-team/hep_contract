@@ -5,7 +5,7 @@ ACTION item_oasis::init() {
     config.get_or_create(get_self(), config_a{});
 }
 
-ACTION item_oasis::create(name seller,name buyer,uint64_t transaction_board_id,asset price, uint64_t date) {
+ACTION item_oasis::create(name seller,name buyer,uint64_t transaction_board_id,asset price, uint64_t date, uint64_t game_id, uint64_t item_count,uint64_t game_server,uint64_t item_type) {
 
     require_auth(get_self());
 
@@ -17,11 +17,15 @@ ACTION item_oasis::create(name seller,name buyer,uint64_t transaction_board_id,a
       row.buyer = buyer;
       row.buy_confirmation = 0;
       row.sell_confirmation = 0; 
-      row.trasaction_completed = 0;  
+      row.transaction_completed = 0;  
       row.is_fraud = 0;
       row.transaction_board_id = transaction_board_id;
       row.price = price;
       row.date = date;
+      row.game_id = game_id;
+      row.item_count = item_count;
+      row.game_server = game_server;
+      row.item_type = item_type;
     });
     config.set(current_config, get_self());
 }
@@ -36,7 +40,7 @@ ACTION item_oasis::buyconfirmed(uint64_t transaction_id){
       transactions.modify(transaction_itr, same_payer, [&](auto& transaction) {
       transaction.buy_confirmation = 1;
       if(transaction.sell_confirmation == 1){
-        transaction.trasaction_completed = 1;
+        transaction.transaction_completed = 1;
 
         action(
           permission_level{get_self(), name("active")},
@@ -86,11 +90,11 @@ ACTION item_oasis::expiration(uint64_t date){
   string memo = "Complete";
   for (auto itr = transactions.begin(); itr != transactions.end(); ++itr) {
       uint64_t just_date = itr->date / 1000000;
-      if (just_date == date && itr->trasaction_completed == 0 && itr->buy_confirmation == 0) {
+      if (just_date == date && itr->transaction_completed == 0 && itr->buy_confirmation == 0) {
           transactions.modify(itr,same_payer,[&](auto& transaction) {
             transaction.buy_confirmation = 1;
             if(transaction.sell_confirmation == 1 && transaction.is_fraud == 0){
-              transaction.trasaction_completed = 1;
+              transaction.transaction_completed = 1;
 
               action(
                 permission_level{get_self(), name("active")},

@@ -9,7 +9,7 @@ CONTRACT item_oasis : public contract {
 public:
   using contract::contract;
     ACTION init();
-    ACTION create(name seller,name buyer,uint64_t transaction_board_id,asset price,uint64_t date);
+    ACTION create(name seller,name buyer,uint64_t transaction_board_id,asset price, uint64_t date, uint64_t game_id, uint64_t item_count,uint64_t game_server,uint64_t item_type);
     ACTION buyconfirmed(uint64_t transaction_id);
     ACTION saleconfirmed(uint64_t transaction_id);
     ACTION setisfraud(uint64_t transaction_id);
@@ -20,20 +20,26 @@ public:
     name             buyer;
     uint8_t          buy_confirmation;
     uint8_t          sell_confirmation;    
-    uint8_t          trasaction_completed;
+    uint8_t          transaction_completed;
     uint8_t          is_fraud;
     uint64_t         transaction_board_id;
     asset            price;
     uint64_t         date;
+    uint64_t         game_id;
+    uint64_t         game_server;
+    uint64_t         item_type;
+    uint64_t         item_count;
 
     uint64_t primary_key() const { return transaction_id; };
     uint64_t by_seller() const { return seller.value; }; 
     uint64_t by_buyer() const { return buyer.value; }; 
     uint64_t by_buy_confirmation() const { return buy_confirmation; }; 
     uint64_t by_sell_confirmation() const { return sell_confirmation; }; 
-    uint64_t by_trasaction_completed() const { return trasaction_completed; }; 
+    uint64_t by_trasaction_completed() const { return transaction_completed; }; 
     uint64_t by_fraud() const { return is_fraud; };
     uint64_t by_date() const { return date; };
+    uint64_t by_game_id() const { return game_id; };
+    uint64_t by_transaction_board_id() const { return transaction_board_id; };
   };
 
   typedef multi_index<name("transactions"), transaction_s,
@@ -43,7 +49,9 @@ public:
     indexed_by<name("bysellconf"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_sell_confirmation>>,
     indexed_by<name("bytrxcom"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_trasaction_completed>>,
     indexed_by<name("bydate"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_date>>,
-    indexed_by<name("byfraud"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_fraud>>
+    indexed_by<name("byfraud"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_fraud>>,
+    indexed_by<name("bygameid"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_game_id>>,
+    indexed_by<name("bytrxboardid"), const_mem_fun<transaction_s, uint64_t, &transaction_s::by_transaction_board_id>>
     > transaction_t;
 
     TABLE config_a {
