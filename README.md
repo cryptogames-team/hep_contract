@@ -19,5 +19,6 @@ CryptoGames는 기존 EOSIO의 블록 생산자의 페널티와 보상 지급방
 
 기존 EOSIO에서는 블록 생산자가 블록을 다 생산하면 해당 보상이 자동으로 생산자에게 전달되지 않고 시스템 계정에 쌓이게 됩니다. 그래서 블록 생산자는 직접 cleos를 통해 보상을 수령해야되는 번거로움이 있습니다. ([해당 명령어는 cleos system claimrewards 입니다](https://developers.eos.io/manuals/eos/latest/cleos/command-reference/system/system-claimrewards)) 
 
-ㄴㄴ
+그래서 Cyptogames는 이러한 불편함을 해결하고자 블록 생산자가 블록을 생산하고 확정되었을 때, 즉 라운드가 끝났을 때 보상을 자동으로 지급되도록 시스템 컨트랙트의 코드를 수정했습니다.
 
+![슬라이드14](https://github.com/cryptogames-team/hep_contract/assets/51877962/8d3fa198-704c-4c3f-a806-07a846fb63ce)
