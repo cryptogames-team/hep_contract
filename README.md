@@ -11,11 +11,11 @@ CryptoGames는 기존 EOSIO의 블록 생산자의 페널티와 보상 지급방
 
 
 
-<div style="text-align:center">
-  <img src="https://github.com/cryptogames-team/hep_contract/assets/51877962/2e037f20-eb34-4359-b604-c7770b036048" width="50%" height="50%" />
-</div>
 
-![슬라이드16](https://github.com/cryptogames-team/hep_contract/assets/51877962/2e037f20-eb34-4359-b604-c7770b036048){: width="300" height="300" .center}
+<img src="https://github.com/cryptogames-team/hep_contract/assets/51877962/2e037f20-eb34-4359-b604-c7770b036048" width="50%" height="50%" />
+
+
+
 
 
 수정 부분 2 : 보상 지급 방식 변경
@@ -27,4 +27,4 @@ CryptoGames는 기존 EOSIO의 블록 생산자의 페널티와 보상 지급방
 
 그래서 Cyptogames는 이러한 불편함을 해결하고자 블록 생산자가 블록을 생산하고 확정되었을 때, 즉 라운드가 끝났을 때 보상을 자동으로 지급되도록 시스템 컨트랙트의 코드를 수정했습니다.
 
-![슬라이드14](https://github.com/cryptogames-team/hep_contract/assets/51877962/8d3fa198-704c-4c3f-a806-07a846fb63ce)
+<img src="https://github.com/cryptogames-team/hep_contract/assets/51877962/8d3fa198-704c-4c3f-a806-07a846fb63ce" width="50%" height="50%" />
